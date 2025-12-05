@@ -269,3 +269,49 @@ textarea {
     gap: 0.2rem;
   }
 }
+
+.recovery-card {
+  margin-top: 0.6rem;
+}
+
+.oura-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.oura-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
+.oura-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.oura-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.oura-metric {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.oura-metric-label {
+  color: #4b5563;
+}
+
+.oura-metric-value {
+  font-weight: 600;
+}
+
