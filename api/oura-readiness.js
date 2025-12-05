@@ -31,12 +31,13 @@ export default async function handler(req, res) {
   const data = await resp.json();
 
   // Option: auf das Wichtigste reduzieren
-  const simplified = data.data.map((d) => ({
-    day: d.day,
-    score: d.score,
-    resting_heart_rate: d.resting_heart_rate,
-    // evtl. hier noch hrv_balance o.Ä. einbauen, sobald du die Struktur kennst
-  }));
+  const simplified = (data.data || []).map((d) => ({
+  day: d.day,
+  readiness: d.score,
+  rhr: d.resting_heart_rate ?? null,
+  hrv: d.hrv_balance ?? d.hrv_rmssd ?? null,
+}));
+
 
   return res.status(200).json({ data: simplified });
 }
